@@ -4,6 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-image: url("back.jpeg");
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -26,13 +27,19 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .dancer1{
-  border:10px solid blue;
-  border-radius:10px;
+/*  border:10px solid blue;
+  border-radius:10px;*/
+  height: 163px;
+  width: 160px;
+  background-image: url('russianman.gif') !important;
   position:absolute;
 }
 .dancer2{
-  border:10px solid yellow;
-  border-radius:10px;
+/*  border:10px solid yellow;
+  border-radius:10px;*/
+  height: 250px;
+  width: 300px;
+  background-image: url('shuffler2.gif') !important;
   position:absolute;
 }
 .lineUpButton{

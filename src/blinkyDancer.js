@@ -23,6 +23,17 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   //this.oldStep = makeDancer.prototype.step.call(this);
   this.spacer = 10;
+  this.small = false;
+  this.size = 10;
+  this.$node.on('mouseover', function() {
+    if (this.small) {
+      this.grow();
+      this.small = !this.small;
+    } else {
+      this.shrink();
+      this.small = !this.small;
+    }
+  }.bind(this));
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -41,5 +52,18 @@ makeBlinkyDancer.prototype.lineUp = function(space) {
 makeBlinkyDancer.prototype.changeColor = function() {
   var colors = ['#FF0000', '#3cb371', '#4B0082', '#8B00FF', '#ffffff'];
   var randomColor = colors[Math.floor(Math.random() * colors.length)];
-  this.$node.css({"border":"10px solid " + randomColor});
+  this.$node.css({"border": this.size + "px solid " + randomColor});
+};
+
+makeBlinkyDancer.prototype.grow = function() {
+  this.size = 60;
+  // console.log('click event');
+  this.$node.css({'border': this.size + 'px solid'});
+  this.$node.css({'border-radius': this.size + 'px'});
+};
+
+makeBlinkyDancer.prototype.shrink = function() {
+  this.size = 10;
+  this.$node.css({'border': this.size + 'px solid'});
+  this.$node.css({'border-radius': this.size + 'px'});
 };

@@ -36,16 +36,12 @@ $(document).ready(function() {
   });
   
   $('.lineUpButton').on('click', function(event) {
-    var space = 40;
+    var space = 160;
     for (var i = 0; i < dancers.length; i++) {
       dancers[i].lineUp(space);
-      space += 30;
+      space += 80;
     }
   });
   
-  $('.dancer1').on('click', function(event) {
-    console.log('click event');
-    //$(this).grow();
-  });
 });
 

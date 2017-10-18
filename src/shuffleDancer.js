@@ -1,6 +1,6 @@
 var makeShuffleDancer = function(left, right, timeBetweenSteps) {
   makeDancer.call(this, left, right, timeBetweenSteps);
-  this.$node = $('<span class="dancer2"></span>');
+  this.$node = $('<span class="dancer2" <img src = shuffler2.gif></span>');
   this.left = left;
   this.right = right;
   this.setPosition(this.left, this.right);

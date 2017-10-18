@@ -2,7 +2,7 @@ var makeRussianDancer = function(top, bottom, timeBetweenSteps) {
   makeDancer.call(this, top, bottom, timeBetweenSteps);
   this.top = top;
   this.bottom = bottom;
-  this.$node = $('<span class="dancer1"></span>');
+  this.$node = $('<span class="dancer1"<IMG SRC = russianman.gif></span>');
   this.setPosition(this.top, this.bottom);
   this.bouncer = false;
   this.small = true;
