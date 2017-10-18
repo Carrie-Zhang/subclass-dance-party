@@ -16,8 +16,8 @@ makeShuffleDancer.prototype.step = function() {
   this.move();
 };
 
-makeShuffleDancer.prototype.move = function(left, right) {
-  console.log(this.slide);
+makeShuffleDancer.prototype.move = function() {
+  // console.log(this.slide);
   if (this.slide) {
     this.$node.animate({
       'marginLeft' : '+=50px'
@@ -28,4 +28,8 @@ makeShuffleDancer.prototype.move = function(left, right) {
     });
   } 
   this.slide = !this.slide;
+};
+
+makeShuffleDancer.prototype.lineUp = function(space) { 
+  this.$node.css({"left" : "5% ", "top": space + "px", "position" : "absolute"});
 };

@@ -28,6 +28,24 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    dancers.push(dancer);
+    
+    if (dancerMakerFunctionName === 'makeBlinkyDancer') {
+      dancer.changeColor();
+    }
+  });
+  
+  $('.lineUpButton').on('click', function(event) {
+    var space = 40;
+    for (var i = 0; i < dancers.length; i++) {
+      dancers[i].lineUp(space);
+      space += 30;
+    }
+  });
+  
+  $('.dancer1').on('click', function(event) {
+    console.log('click event');
+    //$(this).grow();
   });
 });
 

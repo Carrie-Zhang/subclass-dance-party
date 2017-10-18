@@ -31,7 +31,6 @@
 //   return dancer;
 // };
 
-
 var makeDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<span class="dancer"></span>'); 
   this.top = top;
